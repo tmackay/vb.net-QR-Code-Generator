@@ -1,0 +1,1303 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2005/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <DataSources>
+    <DataSource Name="SoftlinkDataSource">
+      <rd:DataSourceID>98ab0b61-46fd-4663-a6ac-38988586a0b3</rd:DataSourceID>
+      <DataSourceReference>SoftlinkDataSource</DataSourceReference>
+    </DataSource>
+  </DataSources>
+  <InteractiveHeight>29.7cm</InteractiveHeight>
+  <ReportParameters>
+    <ReportParameter Name="search">
+      <DataType>String</DataType>
+      <Nullable>true</Nullable>
+      <DefaultValue>
+        <Values>
+          <Value>SELECT l3_Uuid FROM l3_Client</Value>
+        </Values>
+      </DefaultValue>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>Report_Parameter_0</Prompt>
+      <Hidden>true</Hidden>
+    </ReportParameter>
+    <ReportParameter Name="corporationName">
+      <DataType>String</DataType>
+      <Nullable>true</Nullable>
+      <DefaultValue>
+        <Values>
+          <Value />
+        </Values>
+      </DefaultValue>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>Report_Parameter_1</Prompt>
+      <Hidden>true</Hidden>
+    </ReportParameter>
+    <ReportParameter Name="clientName">
+      <DataType>String</DataType>
+      <Nullable>true</Nullable>
+      <DefaultValue>
+        <Values>
+          <Value />
+        </Values>
+      </DefaultValue>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>Report_Parameter_2</Prompt>
+      <Hidden>true</Hidden>
+    </ReportParameter>
+    <ReportParameter Name="fontName">
+      <DataType>String</DataType>
+      <Nullable>true</Nullable>
+      <DefaultValue>
+        <Values>
+          <Value>Tahoma</Value>
+        </Values>
+      </DefaultValue>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>Report_Parameter_5</Prompt>
+      <Hidden>true</Hidden>
+    </ReportParameter>
+    <ReportParameter Name="pathToLogo">
+      <DataType>String</DataType>
+      <Nullable>true</Nullable>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>pathToLogo</Prompt>
+      <Hidden>true</Hidden>
+    </ReportParameter>
+    <ReportParameter Name="imagePrefix">
+      <DataType>String</DataType>
+      <Nullable>true</Nullable>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>imagePrefix</Prompt>
+      <Hidden>true</Hidden>
+    </ReportParameter>
+    <ReportParameter Name="imageSuffix">
+      <DataType>String</DataType>
+      <Nullable>true</Nullable>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>imageSuffix</Prompt>
+      <Hidden>true</Hidden>
+    </ReportParameter>
+  </ReportParameters>
+  <rd:DrawGrid>true</rd:DrawGrid>
+  <InteractiveWidth>21cm</InteractiveWidth>
+  <rd:GridSpacing>0.25cm</rd:GridSpacing>
+  <rd:SnapToGrid>true</rd:SnapToGrid>
+  <RightMargin>1.5cm</RightMargin>
+  <LeftMargin>1.5cm</LeftMargin>
+  <BottomMargin>1cm</BottomMargin>
+  <rd:ReportID>4eb77cd7-3756-4cd8-88f9-06b2b06e4e5d</rd:ReportID>
+  <PageWidth>21cm</PageWidth>
+  <DataSets>
+    <DataSet Name="Client">
+      <Fields>
+        <Field Name="l3_Uuid">
+          <DataField>l3_Uuid</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="l3_CorpId">
+          <DataField>l3_CorpId</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="l3_TimeChanged">
+          <DataField>l3_TimeChanged</DataField>
+          <rd:TypeName>System.DateTime</rd:TypeName>
+        </Field>
+        <Field Name="l3_TimeEntered">
+          <DataField>l3_TimeEntered</DataField>
+          <rd:TypeName>System.DateTime</rd:TypeName>
+        </Field>
+        <Field Name="l3_WhoChanged">
+          <DataField>l3_WhoChanged</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="l3_WhoEntered">
+          <DataField>l3_WhoEntered</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="l3_Alias">
+          <DataField>l3_Alias</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="l3_FamilyName">
+          <DataField>l3_FamilyName</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="l3_PersonalName">
+          <DataField>l3_PersonalName</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="l3_DepartmentUuid">
+          <DataField>l3_DepartmentUuid</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="l3_BranchUuid">
+          <DataField>l3_BranchUuid</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="l3_Address">
+          <DataField>l3_Address</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="l3_AltContact">
+          <DataField>l3_AltContact</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="l3_AltPhone">
+          <DataField>l3_AltPhone</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="l3_Phone">
+          <DataField>l3_Phone</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="l3_PasswordChanged">
+          <DataField>l3_PasswordChanged</DataField>
+          <rd:TypeName>System.DateTime</rd:TypeName>
+        </Field>
+        <Field Name="l3_Fax">
+          <DataField>l3_Fax</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="l3_Email">
+          <DataField>l3_Email</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="l3_CollectUuid">
+          <DataField>l3_CollectUuid</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="l3_BorrowerLoanCategoryUuid">
+          <DataField>l3_BorrowerLoanCategoryUuid</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="l3_Course">
+          <DataField>l3_Course</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="l3_Notes">
+          <DataField>l3_Notes</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="l3_CostCentreUuid">
+          <DataField>l3_CostCentreUuid</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="l3_Password">
+          <DataField>l3_Password</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="l3_TimeRegistered">
+          <DataField>l3_TimeRegistered</DataField>
+          <rd:TypeName>System.DateTime</rd:TypeName>
+        </Field>
+        <Field Name="l3_Birthday">
+          <DataField>l3_Birthday</DataField>
+          <rd:TypeName>System.DateTime</rd:TypeName>
+        </Field>
+        <Field Name="l3_ExpiryDate">
+          <DataField>l3_ExpiryDate</DataField>
+          <rd:TypeName>System.DateTime</rd:TypeName>
+        </Field>
+        <Field Name="l3_AmountOwing">
+          <DataField>l3_AmountOwing</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="l3_HelpOn">
+          <DataField>l3_HelpOn</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="l3_DefaultOperator">
+          <DataField>l3_DefaultOperator</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="l3_DateVisited">
+          <DataField>l3_DateVisited</DataField>
+          <rd:TypeName>System.DateTime</rd:TypeName>
+        </Field>
+        <Field Name="l3_Gender">
+          <DataField>l3_Gender</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="l3_ClientGroupUuid">
+          <DataField>l3_ClientGroupUuid</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="l3_UserRoleUuid">
+          <DataField>l3_UserRoleUuid</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="l3_YearUuid">
+          <DataField>l3_YearUuid</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="l3_StCode">
+          <DataField>l3_StCode</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="l3_ReaderAgeUuid">
+          <DataField>l3_ReaderAgeUuid</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="l3_BorrowerTypeUuid">
+          <DataField>l3_BorrowerTypeUuid</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="l3_MailTitle">
+          <DataField>l3_MailTitle</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="l3_UserName">
+          <DataField>l3_UserName</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="l3_ImageUuid">
+          <DataField>l3_ImageUuid</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="l3_OpacDefaultSearch">
+          <DataField>l3_OpacDefaultSearch</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="l3_TextHire">
+          <DataField>l3_TextHire</DataField>
+          <rd:TypeName>System.Boolean</rd:TypeName>
+        </Field>
+        <Field Name="l3_LocaleUuid">
+          <DataField>l3_LocaleUuid</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="l3_ImageFileUuid">
+          <DataField>l3_ImageFileUuid</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="l3_LogoFileUuid">
+          <DataField>l3_LogoFileUuid</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="l3_MiddleInitial">
+          <DataField>l3_MiddleInitial</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="l3_IllId">
+          <DataField>l3_IllId</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="l3_IllPassword">
+          <DataField>l3_IllPassword</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="l3_IllUserName">
+          <DataField>l3_IllUserName</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="l3_IsARTEmailFormat">
+          <DataField>l3_IsARTEmailFormat</DataField>
+          <rd:TypeName>System.Boolean</rd:TypeName>
+        </Field>
+        <Field Name="l3_UserBool">
+          <DataField>l3_UserBool</DataField>
+          <rd:TypeName>System.Boolean</rd:TypeName>
+        </Field>
+        <Field Name="l3_UserDate">
+          <DataField>l3_UserDate</DataField>
+          <rd:TypeName>System.DateTime</rd:TypeName>
+        </Field>
+        <Field Name="l3_UserInt">
+          <DataField>l3_UserInt</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="l3_UserList1Uuid">
+          <DataField>l3_UserList1Uuid</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="l3_UserList2Uuid">
+          <DataField>l3_UserList2Uuid</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="l3_UserList3Uuid">
+          <DataField>l3_UserList3Uuid</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="l3_UserNote1">
+          <DataField>l3_UserNote1</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="l3_UserNote2">
+          <DataField>l3_UserNote2</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="l3_UserText1">
+          <DataField>l3_UserText1</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="l3_UserText2">
+          <DataField>l3_UserText2</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="l3_MemberSince">
+          <DataField>l3_MemberSince</DataField>
+          <rd:TypeName>System.DateTime</rd:TypeName>
+        </Field>
+        <Field Name="l3_PostCode">
+          <DataField>l3_PostCode</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="l3_Housebound">
+          <DataField>l3_Housebound</DataField>
+          <rd:TypeName>System.Boolean</rd:TypeName>
+        </Field>
+        <Field Name="l3_MotherPhone">
+          <DataField>l3_MotherPhone</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="l3_FatherPhone">
+          <DataField>l3_FatherPhone</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="l3_IdCardNumber">
+          <DataField>l3_IdCardNumber</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="l3_PassportNumber">
+          <DataField>l3_PassportNumber</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="l3_TempAddress">
+          <DataField>l3_TempAddress</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="l3_SchoolIndexNumber">
+          <DataField>l3_SchoolIndexNumber</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="l3_ParentsAddress">
+          <DataField>l3_ParentsAddress</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="l3_ParentsIdCardNumber">
+          <DataField>l3_ParentsIdCardNumber</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="l3_ParentsPassportNumber">
+          <DataField>l3_ParentsPassportNumber</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="l3_ParentsTempAddress">
+          <DataField>l3_ParentsTempAddress</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="l3_Deposit">
+          <DataField>l3_Deposit</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="l3_ExpandFavourites">
+          <DataField>l3_ExpandFavourites</DataField>
+          <rd:TypeName>System.Boolean</rd:TypeName>
+        </Field>
+        <Field Name="l3_AdvanceBookable">
+          <DataField>l3_AdvanceBookable</DataField>
+          <rd:TypeName>System.Boolean</rd:TypeName>
+        </Field>
+        <Field Name="l3_BranchName">
+          <DataField>l3_BranchName</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="l3_ClientGroup">
+          <DataField>l3_ClientGroup</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="l3_FileData">
+          <DataField>l3_FileData</DataField>
+          <rd:TypeName>System.Byte[]</rd:TypeName>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>SoftlinkDataSource</DataSourceName>
+        <CommandText>= "SELECT l3_Client.*, l3_Branch.l3_Term AS l3_BranchName, l3_ClientGroup.l3_Name AS l3_ClientGroup, l3_File.l3_FileData AS l3_FileData
+ FROM l3_Client
+ LEFT JOIN l3_Branch
+ ON l3_Branch.l3_Uuid=l3_Client.l3_BranchUuid
+ LEFT JOIN l3_ClientGroup
+ ON l3_ClientGroup.l3_Uuid=l3_Client.l3_ClientGroupUuid
+ LEFT JOIN l3_File
+ ON l3_File.l3_Uuid = l3_Client.l3_ImageFileUuid
+ WHERE l3_Client.l3_Uuid IN (" &amp; Parameters!search.Value &amp; ")
+ ORDER BY l3_Client.l3_FamilyName"</CommandText>
+        <rd:UseGenericDesigner>true</rd:UseGenericDesigner>
+      </Query>
+    </DataSet>
+  </DataSets>
+  <Code>Public Function NameLabel (PersonalName AS String, FamilyName AS String, Group AS String) AS String
+
+  nameLabel = ""
+
+  nameLabel = nameLabel &amp; FamilyName &amp; ", " &amp; PersonalName &amp; vbCrLf
+
+  If (Not IsEmpty(Group)) Then
+
+    nameLabel = nameLabel &amp; "Class: " &amp; Group
+
+  End If
+
+End Function
+
+Public Function IsEmpty(_toTest AS String) AS Boolean
+
+  RETURN IsNothing(_toTest) OR LTRIM(_toTest) = ""
+
+End Function
+
+Public Function getCorpName(corpParm AS String, reportPath AS String) AS String
+  Dim corpName AS String = ""
+
+  If (IsEmpty(corpParm)) Then 
+    corpName = Mid(reportPath,2,(InStr(Mid(reportPath,2),"/")-1))
+  Else
+    corpName = corpParm
+  End If
+
+  Return corpName
+End Function
+
+    Public Function Encode(ByVal content As [String], ByVal qrcodeVersion As Byte, ByVal ErrorCorrectionLevel As Integer) As [String]
+        Return Encode(content, qrcodeVersion, ErrorCorrectionLevel, System.Text.Encoding.ASCII)
+    End Function
+
+    Public Function Encode(ByVal content As [String], ByVal qrcodeVersion As Byte, ByVal ErrorCorrectionLevel As Integer, ByVal encoding As System.Text.Encoding) As [String]
+        Dim qr As [String] = ""
+        Dim matrix As Boolean()() = calQrcode(encoding.GetBytes(content), qrcodeVersion, ErrorCorrectionLevel)
+        For i As Integer = 0 To matrix.Length \ 2 - 1
+            qr += Chr(0)
+            For j As Integer = 0 To matrix.Length - 1
+                If (matrix(j)(i * 2) And matrix(j)(i * 2 + 1)) Then
+                    qr += "█"
+                ElseIf matrix(j)(i * 2) Then
+                    qr += "▀"
+                ElseIf matrix(j)(i * 2 + 1) Then
+                    qr += "▄"
+                Else
+                    qr += " "
+                End If
+            Next
+            qr += Chr(0) &amp; vbLf
+        Next
+        qr += Chr(0)
+        For j As Integer = 0 To matrix.Length - 1
+            If matrix(j)(matrix.Length - 1) Then
+                qr += "▀"
+            Else
+                qr += " "
+            End If
+        Next
+        qr += Chr(0)
+        Return qr
+    End Function
+
+    ' ErrorCorrectionLevel index {0=&gt;M, 1=&gt;L, 2=&gt;H, 3=&gt;Q}
+    ' qrcodeVersion: minimum qr code version required, automatically increased if required by data
+    Private Function calQrcode(ByVal qrcodeRawData As Byte(), ByVal qrcodeVersion As Byte, ByVal ErrorCorrectionLevel As Integer) As Boolean()()
+        Dim DataLength As UInteger = qrcodeRawData.Length
+
+        'Enqueue the data for sequential access
+        Dim DataQueue As New Collections.Generic.Queue(Of Byte)(qrcodeRawData)
+
+        If DataLength &lt;= 0 Then
+            Dim ret As Boolean()() = New Boolean()() {New Boolean() {False}}
+            Return ret
+        End If
+
+        ' Determine encoding mode based on received character set - use only single mode
+        Dim qrcodeEncodeMode As Byte ' 0=Numeric, 1=Alphanumeric, 2=8-bit Byte Encoding
+        Dim AlphaNumericSpecialChars As Char() = New Char() {" ", "$", "%", "*", "+", "-", ".", "/", ":"}
+        For i As Integer = 0 To DataLength - 1
+            If (qrcodeRawData(i) &gt;= Asc("0") AndAlso qrcodeRawData(i) &lt;= Asc("9")) Then Continue For ' optimise for Numeric mode, then Alphanumeric
+            qrcodeEncodeMode = 1
+            If (qrcodeRawData(i) &lt; Asc("A") OrElse qrcodeRawData(i) &gt; Asc("Z")) AndAlso (Array.IndexOf(AlphaNumericSpecialChars, Chr(qrcodeRawData(i))) = 0) Then
+                qrcodeEncodeMode = 2
+                Exit For
+            End If
+        Next
+
+        Static characterCountBits As Byte()() = New Byte(2)() {New Byte(2) {10, 12, 14}, New Byte(2) {9, 11, 13}, New Byte(2) {8, 16, 16}}
+
+        Dim DataBits As Integer
+        Dim DigitGroups As Integer
+        Dim RemainingDigits As Integer
+
+        ' TODO: repeated code, use array constant to store encode mode parameters and condense this logic
+        If qrcodeEncodeMode = 0 Then
+            DigitGroups = DataLength \ 3
+            RemainingDigits = DataLength Mod 3
+            DataBits = 4 + 10 * DigitGroups + 7 * (RemainingDigits &gt;&gt; 1) + 4 * (RemainingDigits And 1)
+        ElseIf qrcodeEncodeMode = 1 Then
+            DigitGroups = DataLength \ 2
+            RemainingDigits = DataLength Mod 2
+            DataBits = 4 + 11 * DigitGroups + 6 * (RemainingDigits And 1)
+        Else
+            DigitGroups = DataLength
+            RemainingDigits = 0
+            DataBits = 4 + 8 * DigitGroups
+        End If
+
+        Dim ModulesAcross As Byte
+        Dim AlignmentPatternsAcross As Byte
+        Dim AlignmentPatternCount As Byte
+        Dim DataECCodewords As Integer
+        Dim ECCodewords As Integer
+
+		' TODO: Find the pattern here...
+        Static Blocks As Integer()() = New Integer()() { _
+            New Integer() {0, 1, 1, 1, 2, 2, 4, 4, 4, 5, 5, 5, 8, 9, 9, 10, 10, 11, 13, 14, 16, 17, 17, 18, 20, 21, 23, 25, 26, 28, 29, 31, 33, 35, 37, 38, 40, 43, 45, 47, 49}, _
+            New Integer() {0, 1, 1, 1, 1, 1, 2, 2, 2, 2, 4, 4, 4, 4, 4, 6, 6, 6, 6, 7, 8, 8, 9, 9, 10, 12, 12, 12, 13, 14, 15, 16, 17, 18, 19, 19, 20, 21, 22, 24, 25}, _
+            New Integer() {0, 1, 1, 2, 4, 4, 4, 5, 6, 8, 8, 11, 11, 16, 16, 18, 16, 19, 21, 25, 25, 25, 34, 30, 32, 35, 37, 40, 42, 45, 48, 51, 54, 57, 60, 63, 66, 70, 74, 77, 81}, _
+            New Integer() {0, 1, 1, 2, 2, 4, 4, 6, 6, 8, 8, 8, 10, 12, 16, 12, 17, 16, 18, 21, 20, 23, 23, 25, 27, 29, 34, 34, 35, 38, 40, 43, 45, 48, 51, 53, 56, 59, 62, 65, 68} _
+        }
+
+        Static ECratio As Double() = New Double() {0.1855, 0.1, 0.32, 0.2699}
+
+        Static Exceptions As Integer()() = New Integer()() { _
+            New Integer() {0}, _
+            New Integer() {0, 7, 10, 15}, _
+            New Integer() {0, 17}, _
+            New Integer() {0, 13, 22} _
+        }
+
+        Dim usedDataCodewords As Integer
+
+        'calculate the required version
+        Dim versionGroup As Byte
+        For qrcodeVersion = qrcodeVersion To 40
+            ModulesAcross = 17 + 4 * qrcodeVersion
+            If qrcodeVersion &gt; 1 Then
+                AlignmentPatternsAcross = (qrcodeVersion \ 7) + 2
+                AlignmentPatternCount = AlignmentPatternsAcross ^ 2 - 3
+            End If
+
+            DataECCodewords = ModulesAcross ^ 2 - 191 ' modules less 3 8x8 Position Detection Patterns and 31-bit Format Information, plus 32-bit Timing Pattern overlap with Position Detection Patterns
+            DataECCodewords -= AlignmentPatternCount * 25 ' Alignment Patterns,
+            DataECCodewords -= 2 * ModulesAcross ' Timing Patterns,
+            If AlignmentPatternsAcross &gt; 2 Then DataECCodewords += (AlignmentPatternsAcross - 2) * 10 ' Timing Patterns overlap Alignment Patterns
+            If qrcodeVersion &gt; 6 Then DataECCodewords -= 36 ' Version Information
+
+            DataECCodewords \= 8 ' Convert to Data/EC Blocks, discarding Remainder Bits
+            If qrcodeVersion &gt;= Exceptions(ErrorCorrectionLevel).Length Then
+                ECCodewords = Math.Round(DataECCodewords / Blocks(ErrorCorrectionLevel)(qrcodeVersion) * ECratio(ErrorCorrectionLevel)) * 2
+            Else
+                ECCodewords = Exceptions(ErrorCorrectionLevel)(qrcodeVersion)
+            End If
+
+            If qrcodeVersion = 10 Or qrcodeVersion = 27 Then versionGroup += 1
+            usedDataCodewords = Math.Ceiling((DataBits + characterCountBits(qrcodeEncodeMode)(versionGroup)) / 8)
+            If usedDataCodewords + ECCodewords * Blocks(ErrorCorrectionLevel)(qrcodeVersion) &lt;= DataECCodewords Then Exit For
+        Next
+
+        ' Log and Antilog tables for bytewise modulo 285 arithmetic
+        Dim Log As Integer() = New Integer(256) {}
+        Dim ALog As Integer() = New Integer(256) {}
+        ALog(0) = 1
+        For i As Integer = 1 To 255
+            ALog(i) = ALog(i - 1) * 2
+            If ALog(i) &gt; 255 Then ALog(i) = ALog(i) Xor 285
+            Log(ALog(i)) = i
+        Next
+
+        Dim G As Byte() = New Byte(ECCodewords) {}
+        G(0) = 1
+        For i As Integer = 0 To ECCodewords - 1
+            For j As Integer = i To 0 Step -1
+                G(j + 1) = G(j + 1) Xor G(j)
+                G(j) = ALog((Log(G(j)) + i) Mod 255)
+            Next
+        Next
+
+        Dim NumBlocks1 As Integer = Blocks(ErrorCorrectionLevel)(qrcodeVersion) - DataECCodewords Mod Blocks(ErrorCorrectionLevel)(qrcodeVersion)
+        Dim NumBlocks2 As Integer = DataECCodewords Mod Blocks(ErrorCorrectionLevel)(qrcodeVersion)
+        Dim BlockSize As Integer = DataECCodewords \ Blocks(ErrorCorrectionLevel)(qrcodeVersion)
+        Dim DataCodewords As Integer = DataECCodewords \ Blocks(ErrorCorrectionLevel)(qrcodeVersion) - ECCodewords
+
+        Dim BitOffset As UInteger
+        Dim dataBitstream As Byte() = New Byte(DataECCodewords - ECCodewords - 1) {} ' give this a name - DataCodewords
+
+        writeBits(dataBitstream, BitOffset, 1 &lt;&lt; qrcodeEncodeMode, 4) ' mode indicator
+        writeBits(dataBitstream, BitOffset, DataLength, characterCountBits(qrcodeEncodeMode)(versionGroup)) ' character count bits
+
+        ' TODO: repeated code.
+        If qrcodeEncodeMode = 0 Then
+            For i As Integer = 0 To DigitGroups - 1 ' write 3 digits as 10-bit
+                Dim DataVal As UInteger = (DataQueue.Dequeue() - Asc("0")) * 100 + (DataQueue.Dequeue() - Asc("0")) * 10 + (DataQueue.Dequeue() - Asc("0"))
+                writeBits(dataBitstream, BitOffset, DataVal, 10)
+            Next
+            If RemainingDigits = 2 Then ' write remainder as 4 or 7 bits
+                Dim DataVal As UInteger = (DataQueue.Dequeue() - Asc("0")) * 10 + (DataQueue.Dequeue() - Asc("0"))
+                writeBits(dataBitstream, BitOffset, DataVal, 7)
+            ElseIf RemainingDigits = 1 Then
+                Dim DataVal As UInteger = DataQueue.Dequeue() - Asc("0")
+                writeBits(dataBitstream, BitOffset, DataVal, 4)
+            End If
+        ElseIf qrcodeEncodeMode = 1 Then ' Alphanumeric mode
+            For i As Integer = 0 To DigitGroups - 1 ' write 2 characters as 11-bit
+                Dim DataVal As UInteger() = New UInteger(1) {}
+                For j As Integer = 0 To 1
+                    If (DataQueue.Peek() &gt;= Asc("0") AndAlso DataQueue.Peek() &lt;= Asc("9")) Then
+                        DataVal(j) = DataQueue.Dequeue() - Asc("0")
+                    ElseIf DataQueue.Peek() &gt;= Asc("A") AndAlso DataQueue.Peek() &lt;= Asc("Z") Then
+                        DataVal(j) = 10 + DataQueue.Dequeue() - Asc("A")
+                    Else
+                        DataVal(j) = 36 + Array.IndexOf(AlphaNumericSpecialChars, Chr(DataQueue.Dequeue()))
+                    End If
+                Next
+                writeBits(dataBitstream, BitOffset, 45 * DataVal(0) + DataVal(1), 11)
+            Next
+            If RemainingDigits = 1 Then ' write remaining character as 6-bit
+                Dim DataVal As UInteger
+                If (DataQueue.Peek() &gt;= Asc("0") AndAlso DataQueue.Peek() &lt;= Asc("9")) Then
+                    DataVal = DataQueue.Dequeue() - Asc("0")
+                ElseIf DataQueue.Peek() &gt;= Asc("A") AndAlso DataQueue.Peek() &lt;= Asc("Z") Then
+                    DataVal = 10 + DataQueue.Dequeue() - Asc("A")
+                Else
+                    DataVal = 36 + Array.IndexOf(AlphaNumericSpecialChars, Chr(DataQueue.Dequeue()))
+                End If
+                writeBits(dataBitstream, BitOffset, DataVal, 6)
+            End If
+        Else ' 8-bit Byte mode
+            For i As Integer = 0 To qrcodeRawData.Length - 1
+                Dim DataVal As UInteger = DataQueue.Dequeue()
+                writeBits(dataBitstream, BitOffset, DataVal, 8)
+            Next
+        End If
+
+        ' add terminator and padding bits
+        Static dataFill As Byte() = New Byte() {236, 17}
+        If DataECCodewords - ECCodewords - usedDataCodewords &gt; 1 Then
+            writeBits(dataBitstream, BitOffset, 0, 4)
+            Dim Offset As Integer = Math.Ceiling(BitOffset / 8)
+            For i As Integer = 0 To DataECCodewords - ECCodewords - Offset - 1
+                dataBitstream(Offset + i) = dataFill(i Mod 2)
+            Next
+        End If
+
+        Dim ECCQueue As New Collections.Generic.Queue(Of Byte)(dataBitstream)
+
+        Dim DataBlocks As Byte()() = New Byte(NumBlocks1 + NumBlocks2 - 1)() {}
+        Dim ErrorBlocks As Byte()() = New Byte(NumBlocks1 + NumBlocks2 - 1)() {}
+
+        ' Calculate the error correction codewords and generate ouput data blocks
+        ' TODO: repeated code.
+        For i As Integer = 0 To NumBlocks1 - 1 ' Numblocks1 blocks of size BlockSize (DataCodewords+ECCodewords)
+            DataBlocks(i) = New Byte(DataCodewords - 1) {}
+            ErrorBlocks(i) = New Byte(ECCodewords) {} ' Extra byte used in calculations
+            For j As Integer = 0 To DataCodewords - 1
+                DataBlocks(i)(j) = ECCQueue.Dequeue()
+                Dim tmp As Byte = ErrorBlocks(i)(0) Xor DataBlocks(i)(j)
+                If tmp &lt;&gt; 0 Then
+                    For k As Integer = 0 To ECCodewords - 1
+                        ErrorBlocks(i)(k) = ALog((Log(tmp) + Log(G(ECCodewords - k - 1))) Mod 255)
+                        ErrorBlocks(i)(k) = ErrorBlocks(i)(k) Xor ErrorBlocks(i)(k + 1)
+                    Next
+                Else
+                    For k As Integer = 0 To ECCodewords - 2
+                        ErrorBlocks(i)(k) = ErrorBlocks(i)(k + 1)
+                    Next
+                    ErrorBlocks(i)(ECCodewords - 1) = 0
+                End If
+            Next
+        Next
+        For i As Integer = 0 To NumBlocks2 - 1 ' Numblocks2 blocks of size BlockSize+1 (DataCodewords+ECCodewords+1)
+            DataBlocks(NumBlocks1 + i) = New Byte(DataCodewords) {}
+            ErrorBlocks(NumBlocks1 + i) = New Byte(ECCodewords) {} ' Extra byte used in calculations
+            For j As Integer = 0 To DataCodewords
+                DataBlocks(NumBlocks1 + i)(j) = ECCQueue.Dequeue()
+                Dim tmp As Byte = ErrorBlocks(NumBlocks1 + i)(0) Xor DataBlocks(NumBlocks1 + i)(j)
+                If tmp &lt;&gt; 0 Then
+                    For k As Integer = 0 To ECCodewords - 1
+                        ErrorBlocks(NumBlocks1 + i)(k) = ALog((Log(tmp) + Log(G(ECCodewords - k - 1))) Mod 255)
+                        ErrorBlocks(NumBlocks1 + i)(k) = ErrorBlocks(NumBlocks1 + i)(k) Xor ErrorBlocks(NumBlocks1 + i)(k + 1)
+                    Next
+                Else
+                    For k As Integer = 0 To ECCodewords - 2
+                        ErrorBlocks(NumBlocks1 + i)(k) = ErrorBlocks(NumBlocks1 + i)(k + 1)
+                    Next
+                    ErrorBlocks(NumBlocks1 + i)(ECCodewords - 1) = 0
+                End If
+            Next
+        Next
+
+        Dim qrcodeData As Byte() = New Byte(DataECCodewords) {} ' Incl. remainder bits
+        Dim qrcodeDataCounter As Integer
+
+        For i As Integer = 0 To DataCodewords - 1
+            For j As Integer = 0 To NumBlocks1 + NumBlocks2 - 1
+                qrcodeData(qrcodeDataCounter) = DataBlocks(j)(i)
+                qrcodeDataCounter += 1
+            Next
+        Next
+        For i As Integer = NumBlocks1 To NumBlocks1 + NumBlocks2 - 1
+            qrcodeData(qrcodeDataCounter) = DataBlocks(i)(DataCodewords)
+            qrcodeDataCounter += 1
+        Next
+        For i As Integer = 0 To ECCodewords - 1
+            For j As Integer = 0 To NumBlocks1 + NumBlocks2 - 1
+                qrcodeData(qrcodeDataCounter) = ErrorBlocks(j)(i)
+                qrcodeDataCounter += 1
+            Next
+        Next
+
+        Dim AlignmentPatternSpacing As Byte = Math.Ceiling(Math.Round((4 + 4 * qrcodeVersion) / (qrcodeVersion \ 7 + 1)) / 2) * 2
+
+        Dim ModuleMatrix As Byte()() = New Byte(ModulesAcross - 1)() {}
+        For i As Integer = 0 To ModulesAcross - 1
+            ModuleMatrix(i) = New Byte(ModulesAcross - 1) {}
+        Next
+
+        ' Position Detection Patterns
+        For i As Integer = 0 To 7
+            For j As Integer = 0 To 7
+                If (i Mod 6 = 0 And j &lt; 7) Or (j Mod 6 = 0 And i &lt; 7) Then
+                    ModuleMatrix(i)(j) = 3
+                    ModuleMatrix(ModulesAcross - i - 1)(j) = 3
+                    ModuleMatrix(j)(ModulesAcross - i - 1) = 3
+                ElseIf i &gt; 1 And i &lt; 5 And j &gt; 1 And j &lt; 5 Then
+                    ModuleMatrix(i)(j) = 3
+                    ModuleMatrix(ModulesAcross - i - 1)(j) = 3
+                    ModuleMatrix(j)(ModulesAcross - i - 1) = 3
+                Else
+                    ModuleMatrix(i)(j) = 2
+                    ModuleMatrix(ModulesAcross - i - 1)(j) = 2
+                    ModuleMatrix(j)(ModulesAcross - i - 1) = 2
+                End If
+            Next
+        Next
+
+        ' Timing Patterns
+        For i As Integer = 8 To ModulesAcross - 9 Step 2
+            ModuleMatrix(i)(6) = 3
+            ModuleMatrix(6)(i) = 3
+            ModuleMatrix(i + 1)(6) = 2
+            ModuleMatrix(6)(i + 1) = 2
+        Next
+
+        ' Alignment Patterns
+        For k As Integer = -2 To 2
+            For l As Integer = -2 To 2
+                Dim Value As Byte
+                If Math.Abs(k) = 2 Or Math.Abs(l) = 2 Or (k = 0 And l = 0) Then
+                    Value = 3
+                Else
+                    Value = 2
+                End If
+                For i As Integer = 1 To AlignmentPatternsAcross - 2
+                    ModuleMatrix(k + ModulesAcross - 7 - i * AlignmentPatternSpacing)(l + 6) = Value
+                    ModuleMatrix(l + 6)(k + ModulesAcross - 7 - i * AlignmentPatternSpacing) = Value
+                Next
+                For i As Integer = 0 To AlignmentPatternsAcross - 2
+                    For j As Integer = 0 To AlignmentPatternsAcross - 2
+                        ModuleMatrix(k + ModulesAcross - 7 - i * AlignmentPatternSpacing)(l + ModulesAcross - 7 - j * AlignmentPatternSpacing) = Value
+                        ModuleMatrix(l + ModulesAcross - 7 - j * AlignmentPatternSpacing)(k + ModulesAcross - 7 - i * AlignmentPatternSpacing) = Value
+                    Next
+                Next
+            Next
+        Next
+
+        'Format Information Placeholder
+        For i As Integer = 0 To 7
+            ModuleMatrix(8)(ModulesAcross - 1 - i) = 2
+            ModuleMatrix(ModulesAcross - 1 - i)(8) = 2
+            ModuleMatrix(8)(i + i \ 6) = 2
+            ModuleMatrix(i + i \ 6)(8) = 2
+        Next
+
+        'Version Information Placeholder
+        If qrcodeVersion &gt;= 7 Then
+            For i As Integer = 0 To 2
+                For j As Integer = 0 To 5
+                    ModuleMatrix(j)(ModulesAcross - 9 - i) = 2
+                    ModuleMatrix(ModulesAcross - 9 - i)(j) = 2
+                Next
+            Next
+        End If
+
+        ' Fill with data
+        BitOffset = 0
+        For i As Integer = (ModulesAcross \ 4) - 1 To 0 Step -1
+            For j As Integer = ModulesAcross * 2 - 1 To 1 - ModulesAcross * 2 Step -2
+                For k As Integer = 3 To 2 Step -1
+                    Dim x As Integer = i * 4 + k + Math.Sign(j)
+                    Dim y As Integer = Math.Abs(j \ 2)
+                    If x &lt; 7 Then x -= 1 ' skip column 6 (timing pattern)
+                    If ModuleMatrix(x)(y) = 0 Then
+                        If ((qrcodeData(BitOffset \ 8) &lt;&lt; (BitOffset Mod 8)) And 128) &gt; 0 Then ModuleMatrix(x)(y) = 1
+                        BitOffset += 1
+                    End If
+                Next
+            Next
+        Next
+
+        'Apply mask(s)
+        Dim MaskedMatrix As Byte()() = New Byte(ModulesAcross - 1)() {}
+        For i As Integer = 0 To ModulesAcross - 1
+            MaskedMatrix(i) = New Byte(ModulesAcross - 1) {}
+        Next
+
+        For j As Integer = 0 To ModulesAcross - 1
+            For i As Integer = 0 To ModulesAcross - 1
+                If ModuleMatrix(j)(i) &gt;&gt; 1 = 0 Then
+                    Dim DataBit As Byte = ModuleMatrix(j)(i) And 1
+                    MaskedMatrix(j)(i) = DataBit Xor (CByte(((i * j) Mod 3 + (i + j) Mod 2) Mod 2 = 0) And 1) ' 111
+                    MaskedMatrix(j)(i) &lt;&lt;= 1
+                    MaskedMatrix(j)(i) += DataBit Xor (CByte(((i * j) Mod 2 + (i * j) Mod 3) Mod 2 = 0) And 1) ' 110
+                    MaskedMatrix(j)(i) &lt;&lt;= 1
+                    MaskedMatrix(j)(i) += DataBit Xor (CByte((i * j) Mod 2 + (i * j) Mod 3 = 0) And 1) ' 101
+                    MaskedMatrix(j)(i) &lt;&lt;= 1
+                    MaskedMatrix(j)(i) += DataBit Xor (CByte((i \ 2 + j \ 3) Mod 2 = 0) And 1) ' 100
+                    MaskedMatrix(j)(i) &lt;&lt;= 1
+                    MaskedMatrix(j)(i) += DataBit Xor (CByte((i + j) Mod 3 = 0) And 1) ' 011
+                    MaskedMatrix(j)(i) &lt;&lt;= 1
+                    MaskedMatrix(j)(i) += DataBit Xor (CByte(j Mod 3 = 0) And 1) ' 010
+                    MaskedMatrix(j)(i) &lt;&lt;= 1
+                    MaskedMatrix(j)(i) += DataBit Xor (CByte(i Mod 2 = 0) And 1) ' 001
+                    MaskedMatrix(j)(i) &lt;&lt;= 1
+                    MaskedMatrix(j)(i) += DataBit Xor (CByte((i + j) Mod 2 = 0) And 1) ' 000
+                Else
+                    MaskedMatrix(j)(i) = (ModuleMatrix(j)(i) And 1) * &amp;HFF
+                End If
+            Next
+        Next
+
+        'Format Information
+        For j As Integer = 7 To 0 Step -1
+            Dim formatInformation As UInteger = ((ErrorCorrectionLevel &lt;&lt; 3) Or j) &lt;&lt; 10
+            Dim remainder As UInteger = formatInformation
+            While remainder &gt; 1023
+                Dim degree As Byte = 0
+                While (2048 &lt;&lt; degree) &lt; remainder
+                    degree += 1
+                End While
+                remainder = remainder Xor (1335 &lt;&lt; degree)
+            End While
+            formatInformation += remainder
+            formatInformation = formatInformation Xor &amp;H5412
+
+            For i As Integer = 0 To 7
+                MaskedMatrix(ModulesAcross - 1 - i)(8) += (formatInformation &gt;&gt; i) And 1
+                If j &lt;&gt; 0 Then MaskedMatrix(ModulesAcross - 1 - i)(8) &lt;&lt;= 1
+                MaskedMatrix(8)(i + i \ 6) += (formatInformation &gt;&gt; i) And 1
+                If j &lt;&gt; 0 Then MaskedMatrix(8)(i + i \ 6) &lt;&lt;= 1
+            Next
+            For i As Integer = 0 To 6
+                MaskedMatrix(8)(ModulesAcross - 7 + i) += (formatInformation &gt;&gt; (i + 8)) And 1
+                If j &lt;&gt; 0 Then MaskedMatrix(8)(ModulesAcross - 7 + i) &lt;&lt;= 1
+                MaskedMatrix(i + i \ 6)(8) += (formatInformation &gt;&gt; (14 - i)) And 1
+                If j &lt;&gt; 0 Then MaskedMatrix(i + i \ 6)(8) &lt;&lt;= 1
+            Next
+        Next
+        MaskedMatrix(8)(ModulesAcross - 8) = &amp;HFF
+
+        'Version Information
+        If qrcodeVersion &gt; 6 Then
+            Dim versionInformation As UInteger = CUInt(qrcodeVersion) &lt;&lt; 12
+            Dim remainder As UInteger = versionInformation
+            While remainder &gt; 4095
+                Dim degree As Byte = 0
+                While (8192 &lt;&lt; degree) &lt; remainder
+                    degree += 1
+                End While
+                remainder = remainder Xor (7973 &lt;&lt; degree)
+            End While
+            versionInformation += remainder
+
+            For i As Integer = 0 To 2
+                For j As Integer = 0 To 5
+                    MaskedMatrix(j)(ModulesAcross - 11 + i) = ((versionInformation &gt;&gt; i + j * 3) And 1) * &amp;HFF
+                    MaskedMatrix(ModulesAcross - 11 + i)(j) = ((versionInformation &gt;&gt; i + j * 3) And 1) * &amp;HFF
+                Next
+            Next
+        End If
+
+        ' Scoring of masking results
+        Dim penaltyScore As Integer() = New Integer(7) {}
+        ' proportion of light and dark
+        Dim darkcount As Integer() = New Integer(7) {}
+
+        For i As Integer = 0 To ModulesAcross - 1
+            ' remember the last 5 runs for each row/col for each bit
+            Dim runs As Integer()()() = New Integer(7)()() {}
+            Dim current As Byte() = New Byte(1) {}
+            Dim previous As Byte() = New Byte(1) {MaskedMatrix(i)(0), MaskedMatrix(0)(i)}
+
+            Dim tmp As Byte = MaskedMatrix(i)(0)
+            For k As Integer = 0 To 7 ' is it quicker to dim outside loop and just zero the array here? hard to say, question of scope and compiler optimisation
+                runs(k) = New Integer(1)() {New Integer(4) {1, 0, 0, 0, 0}, New Integer(4) {1, 0, 0, 0, 0}}
+                darkcount(k) += tmp And 1
+                tmp &gt;&gt;= 1
+            Next
+
+            ' Count runs of adjacent modules in each row/col of same colour. store previous 4 runs to identify pattern 1:1:3:1:1 dark:light:...
+            For j As Integer = 1 To ModulesAcross - 1
+                tmp = MaskedMatrix(i)(0)
+                For k As Integer = 0 To 7
+                    darkcount(k) += tmp And 1
+                    tmp &gt;&gt;= 1
+                Next
+
+                current(0) = MaskedMatrix(i)(j)
+                current(1) = MaskedMatrix(j)(i)
+                For m As Integer = 0 To 1
+                    Dim changed As Byte = current(m) Xor previous(m)
+                    tmp = current(m)
+                    For k As Integer = 0 To 7
+                        runs(k)(m)(0) += 1
+                        If ((changed And 1) = 1) OrElse (j = ModulesAcross - 1) Then
+                            If runs(k)(m)(0) &gt; 5 Then penaltyScore(k) += runs(k)(m)(0) - 2
+                            ' 1:1:3:1:1 dark:light:dark:light:dark
+                            If (tmp And 1) = 1 AndAlso runs(k)(m)(0) = runs(k)(m)(1) AndAlso 3 * runs(k)(m)(0) = runs(k)(m)(2) AndAlso runs(k)(m)(0) = runs(k)(m)(3) AndAlso runs(k)(m)(0) = runs(k)(m)(4) Then penaltyScore(k) += 40
+                            For l As Integer = 0 To 3
+                                runs(k)(m)(l + 1) = runs(k)(m)(l)
+                            Next
+                            runs(k)(m)(0) = 1
+                        End If
+                        changed &gt;&gt;= 1
+                        tmp &gt;&gt;= 1
+                    Next
+                    previous(m) = current(m)
+                Next
+
+                ' Count blocks of 2x2
+                If i &gt; 0 Then
+                    Dim blockAnd As Byte = (MaskedMatrix(i)(j) And MaskedMatrix(i - 1)(j) And MaskedMatrix(i)(j - 1) And MaskedMatrix(i - 1)(j - 1))
+                    Dim blockOr As Byte = (MaskedMatrix(i)(j) Or MaskedMatrix(i - 1)(j) Or MaskedMatrix(i)(j - 1) Or MaskedMatrix(i - 1)(j - 1))
+                    For k As Integer = 0 To 7
+                        If ((blockAnd And 1) = 1) OrElse ((blockOr And 1) = 0) Then penaltyScore(k) += 3
+                        blockAnd &gt;&gt;= 1
+                        blockOr &gt;&gt;= 1
+                    Next
+                End If
+            Next
+        Next
+
+        Dim maskPatternReference As Byte
+        For i As Integer = 0 To 7
+            penaltyScore(i) += 10 * Math.Abs(Math.Round(((0.5 - (darkcount(i) / (ModulesAcross ^ 2))) * 20)))
+            If penaltyScore(i) &lt; penaltyScore(maskPatternReference) Then maskPatternReference = i
+        Next
+
+        Dim MaskedModuleMatrix As Boolean()() = New Boolean(ModulesAcross - 1)() {}
+        For i As Integer = 0 To ModulesAcross - 1
+            MaskedModuleMatrix(i) = New Boolean(ModulesAcross - 1) {}
+        Next
+
+        For i As Integer = 0 To ModulesAcross - 1
+            For j As Integer = 0 To ModulesAcross - 1
+                MaskedModuleMatrix(i)(j) = (MaskedMatrix(i)(j) &gt;&gt; maskPatternReference) And 1
+            Next
+        Next
+
+        Return MaskedModuleMatrix
+    End Function
+
+    ' write up to 24 bits contained in dataVal to byte array bit buffer
+    Private Sub writeBits(ByRef outBuffer As Byte(), ByRef bitOffset As UInteger, ByVal dataVal As UInteger, ByVal bitCount As Byte)
+        dataVal &lt;&lt;= 8 - (bitOffset Mod 8) + 24 - bitCount ' shift left by number of bits left in last byte in buffer. first bit of data is highest
+        For i As Integer = 0 To Math.Ceiling((bitCount + (bitOffset Mod 8)) / 8) - 1
+            If (bitOffset \ 8) + i &lt; outBuffer.Length Then outBuffer((bitOffset \ 8) + i) = outBuffer((bitOffset \ 8) + i) Or ((dataVal &gt;&gt; 8 * (3 - i)) And &amp;HFF)
+        Next
+        bitOffset += bitCount
+    End Sub
+</Code>
+  <Width>18cm</Width>
+  <Body>
+    <ColumnSpacing>1cm</ColumnSpacing>
+    <ReportItems>
+      <List Name="list2">
+        <ZIndex>1</ZIndex>
+        <Left>9cm</Left>
+        <DataSetName>Client</DataSetName>
+        <Visibility>
+          <Hidden>=Iif(RowNumber("Client") mod 2 = 1,false,true)</Hidden>
+        </Visibility>
+        <ReportItems>
+          <Image Name="image3">
+            <Sizing>FitProportional</Sizing>
+            <Visibility>
+              <Hidden>=Iif(Fields!l3_FileData.Value Is Nothing, False, True)</Hidden>
+            </Visibility>
+            <Top>0.25cm</Top>
+            <Width>1.85cm</Width>
+            <MIMEType />
+            <Source>External</Source>
+            <Style />
+            <ZIndex>6</ZIndex>
+            <Left>6.9cm</Left>
+            <Height>2.75cm</Height>
+            <Value>=Iif(Code.IsEmpty(Fields!l3_StCode.Value), Parameters!imagePrefix.Value &amp; Fields!l3_Alias.Value &amp; Parameters!imageSuffix.Value, Parameters!imagePrefix.Value &amp; Fields!l3_StCode.Value &amp; Parameters!imageSuffix.Value)</Value>
+          </Image>
+          <Image Name="image3alt">
+            <Sizing>FitProportional</Sizing>
+            <Visibility>
+              <Hidden>=Iif(Fields!l3_FileData.Value Is Nothing, True, False)</Hidden>
+            </Visibility>
+            <Top>0.25cm</Top>
+            <Width>1.85cm</Width>
+            <MIMEType>image/jpeg</MIMEType>
+            <Source>Database</Source>
+            <Style />
+            <ZIndex>5</ZIndex>
+            <Left>6.9cm</Left>
+            <Height>2.75cm</Height>
+            <Value>=Fields!l3_FileData.Value</Value>
+          </Image>
+          <Textbox Name="textbox7">
+            <Top>4.5cm</Top>
+            <Width>7cm</Width>
+            <Style>
+              <FontFamily>Courier New</FontFamily>
+              <TextAlign>Right</TextAlign>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+            <ZIndex>5</ZIndex>
+            <Left>1.75cm</Left>
+            <Height>0.5cm</Height>
+            <Value>=UCase(Fields!l3_Alias.Value)</Value>
+          </Textbox>
+          <Textbox Name="textbox6">
+            <Top>3.75cm</Top>
+            <Width>1.5cm</Width>
+            <Style>
+              <FontFamily>Consolas</FontFamily>
+              <FontSize>2pt</FontSize>
+              <TextAlign>Left</TextAlign>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+            <ZIndex>4</ZIndex>
+            <Left>0.25cm</Left>
+            <Height>1.25cm</Height>
+            <Value>=Code.encode(UCase(Fields!l3_Alias.Value),1,1)</Value>
+          </Textbox>
+          <Image Name="image2">
+            <Sizing>FitProportional</Sizing>
+            <Top>0.25cm</Top>
+            <Width>3cm</Width>
+            <MIMEType />
+            <Source>External</Source>
+            <Style />
+            <ZIndex>3</ZIndex>
+            <Left>0.25cm</Left>
+            <Height>3.5cm</Height>
+            <Value>=Parameters!pathToLogo.Value</Value>
+          </Image>
+          <Textbox Name="textbox1">
+            <Top>3.75cm</Top>
+            <Width>7cm</Width>
+            <Style>
+              <FontFamily>Free 3 of 9</FontFamily>
+              <FontSize>20pt</FontSize>
+              <TextAlign>Right</TextAlign>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+            <ZIndex>2</ZIndex>
+            <Left>1.75cm</Left>
+            <Height>1.25cm</Height>
+            <Value>="*" &amp; UCase(Fields!l3_Alias.Value) &amp; "*"</Value>
+          </Textbox>
+          <Textbox Name="textbox3">
+            <Top>3cm</Top>
+            <Width>5.5cm</Width>
+            <Style>
+              <FontFamily>=Iif(Code.IsEmpty(Parameters!fontName.Value), "Tahoma", Parameters!fontName.Value)</FontFamily>
+              <FontWeight>700</FontWeight>
+              <TextAlign>Right</TextAlign>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+            <ZIndex>1</ZIndex>
+            <Left>3.25cm</Left>
+            <Height>1cm</Height>
+            <Value>=Code.NameLabel(Fields!l3_PersonalName.Value, Fields!l3_FamilyName.Value, Fields!l3_ClientGroup.Value)</Value>
+          </Textbox>
+          <Textbox Name="textbox4">
+            <Top>0.25cm</Top>
+            <Width>3.7cm</Width>
+            <Style>
+              <FontFamily>=Iif(Code.IsEmpty(Parameters!fontName.Value), "Tahoma", Parameters!fontName.Value)</FontFamily>
+              <TextAlign>Center</TextAlign>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+            <Left>3.25cm</Left>
+            <Height>2.75cm</Height>
+            <Value>=Fields!l3_BranchName.Value</Value>
+          </Textbox>
+        </ReportItems>
+        <Style>
+          <FontFamily>=Iif(Code.IsEmpty(Parameters!fontName.Value), "Tahoma", Parameters!fontName.Value)</FontFamily>
+        </Style>
+        <Grouping Name="list2_Details_Group">
+          <GroupExpressions>
+            <GroupExpression>=Ceiling(RowNumber(Nothing))</GroupExpression>
+          </GroupExpressions>
+        </Grouping>
+      </List>
+      <List Name="list1">
+        <DataSetName>Client</DataSetName>
+        <Visibility>
+          <Hidden>=Iif(RowNumber("Client") mod 2 = 0,false,true)</Hidden>
+        </Visibility>
+        <ReportItems>
+          <Image Name="image4">
+            <Sizing>FitProportional</Sizing>
+            <Visibility>
+              <Hidden>=Iif(Fields!l3_FileData.Value Is Nothing, False, True)</Hidden>
+            </Visibility>
+            <Top>0.25cm</Top>
+            <Width>1.85cm</Width>
+            <MIMEType />
+            <Source>External</Source>
+            <Style />
+            <ZIndex>6</ZIndex>
+            <Left>6.9cm</Left>
+            <Height>2.75cm</Height>
+            <Value>=Iif(Code.IsEmpty(Fields!l3_StCode.Value), Parameters!imagePrefix.Value &amp; Fields!l3_Alias.Value &amp; Parameters!imageSuffix.Value, Parameters!imagePrefix.Value &amp; Fields!l3_StCode.Value &amp; Parameters!imageSuffix.Value)</Value>
+          </Image>
+          <Image Name="image4alt">
+            <Sizing>FitProportional</Sizing>
+            <Visibility>
+              <Hidden>=Iif(Fields!l3_FileData.Value Is Nothing, True, False)</Hidden>
+            </Visibility>
+            <Top>0.25cm</Top>
+            <Width>1.85cm</Width>
+            <MIMEType>image/jpeg</MIMEType>
+            <Source>Database</Source>
+            <Style />
+            <ZIndex>5</ZIndex>
+            <Left>6.9cm</Left>
+            <Height>2.75cm</Height>
+            <Value>=Fields!l3_FileData.Value</Value>
+          </Image>
+          <Textbox Name="textbox8">
+            <Top>4.5cm</Top>
+            <Width>7cm</Width>
+            <Style>
+              <FontFamily>Courier New</FontFamily>
+              <TextAlign>Right</TextAlign>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+            <ZIndex>5</ZIndex>
+            <Left>1.75cm</Left>
+            <Height>0.5cm</Height>
+            <Value>=UCase(Fields!l3_Alias.Value)</Value>
+          </Textbox>
+          <Textbox Name="textbox5">
+            <rd:DefaultName>textbox5</rd:DefaultName>
+            <Top>3.75cm</Top>
+            <Width>1.5cm</Width>
+            <Style>
+              <FontFamily>Consolas</FontFamily>
+              <FontSize>2pt</FontSize>
+              <TextAlign>Left</TextAlign>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+            <ZIndex>4</ZIndex>
+            <Left>0.25cm</Left>
+            <Height>1.25cm</Height>
+            <Value>=Code.encode(UCase(Fields!l3_Alias.Value),1,1)</Value>
+          </Textbox>
+          <Image Name="image1">
+            <Sizing>FitProportional</Sizing>
+            <Top>0.25cm</Top>
+            <Width>3cm</Width>
+            <MIMEType />
+            <Source>External</Source>
+            <Style />
+            <ZIndex>3</ZIndex>
+            <Left>0.25cm</Left>
+            <Height>3.5cm</Height>
+            <Value>=Parameters!pathToLogo.Value</Value>
+          </Image>
+          <Textbox Name="l3_Alias">
+            <rd:DefaultName>l3_Alias</rd:DefaultName>
+            <Top>3.75cm</Top>
+            <Width>7cm</Width>
+            <Style>
+              <FontFamily>Free 3 of 9</FontFamily>
+              <FontSize>20pt</FontSize>
+              <TextAlign>Right</TextAlign>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+            <ZIndex>2</ZIndex>
+            <Left>1.75cm</Left>
+            <Height>1.25cm</Height>
+            <Value>="*" &amp; UCase(Fields!l3_Alias.Value) &amp; "*"</Value>
+          </Textbox>
+          <Textbox Name="textbox2">
+            <rd:DefaultName>textbox2</rd:DefaultName>
+            <Top>3cm</Top>
+            <Width>5.5cm</Width>
+            <Style>
+              <FontFamily>=Iif(Code.IsEmpty(Parameters!fontName.Value), "Tahoma", Parameters!fontName.Value)</FontFamily>
+              <FontWeight>700</FontWeight>
+              <TextAlign>Right</TextAlign>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+            <ZIndex>1</ZIndex>
+            <Left>3.25cm</Left>
+            <Height>1cm</Height>
+            <Value>=Code.NameLabel(Fields!l3_PersonalName.Value, Fields!l3_FamilyName.Value, Fields!l3_ClientGroup.Value)</Value>
+          </Textbox>
+          <Textbox Name="l3_BranchName">
+            <rd:DefaultName>l3_BranchName</rd:DefaultName>
+            <Top>0.25cm</Top>
+            <Width>3.7cm</Width>
+            <Style>
+              <FontFamily>=Iif(Code.IsEmpty(Parameters!fontName.Value), "Tahoma", Parameters!fontName.Value)</FontFamily>
+              <TextAlign>Center</TextAlign>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+            <Left>3.25cm</Left>
+            <Height>2.75cm</Height>
+            <Value>=Fields!l3_BranchName.Value</Value>
+          </Textbox>
+        </ReportItems>
+        <Width>9cm</Width>
+        <Style>
+          <FontFamily>=Iif(Code.IsEmpty(Parameters!fontName.Value), "Tahoma", Parameters!fontName.Value)</FontFamily>
+        </Style>
+        <Grouping Name="list1_Details_Group">
+          <GroupExpressions>
+            <GroupExpression>=Ceiling(RowNumber(Nothing))</GroupExpression>
+          </GroupExpressions>
+        </Grouping>
+      </List>
+    </ReportItems>
+    <Height>5.2cm</Height>
+  </Body>
+  <Language>en-US</Language>
+  <TopMargin>2cm</TopMargin>
+  <PageHeight>29.7cm</PageHeight>
+</Report>
