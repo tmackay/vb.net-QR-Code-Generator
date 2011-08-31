@@ -1,0 +1,1 @@
+A self contained vb.net QR code generator intended for Microsoft Reporting Services. Only required to be able to upload report definitions, no extra libraries to be installed on report server. Uses standard font to produce QR-Code.
